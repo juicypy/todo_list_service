@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  labels:
+    app: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: gcr.io/PROJECT_ID/juicypy/todolist:COMMIT_SHA
+        env:
+          - name: DB_HOST
+            valueFrom:
+              secretKeyRef:
+                name: connections
+                key: DB_HOST
+          - name: DB_NAME
+            valueFrom:
+              secretKeyRef:
+                name: connections
+                key: DB_NAME
+          - name: DB_PASSWORD
+            valueFrom:
+              secretKeyRef:
+                name: connections
+                key: DB_PASSWORD
+          - name: DB_USER
+            valueFrom:
+              secretKeyRef:
+                name: connections
+                key: DB_USER
+        ports:
+        - containerPort: 9434
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: backend
+spec:
+  selector:
+    app: backend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 9434
+  type: LoadBalancer

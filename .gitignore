@@ -1,0 +1,10 @@
+/.idea/dataSources/731176a6-360c-490b-9292-67cdb7c3787e/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta
+/.idea/dataSources/731176a6-360c-490b-9292-67cdb7c3787e/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta
+/.idea/dataSources/731176a6-360c-490b-9292-67cdb7c3787e/storage_v2/_src_/database/postgres.edMnLQ.meta
+/.idea/dataSources/731176a6-360c-490b-9292-67cdb7c3787e/storage_v2/_src_/database/todo_list.9zxrpg/schema/pg_catalog.0S1ZNQ.meta
+/.idea/dataSources/7b6ece09-0a4e-4056-901d-a3f6dc4a9905/storage_v2/_src_/database/todo_list.9zxrpg/schema/pg_catalog.0S1ZNQ.meta
+/.idea/dataSources/7b6ece09-0a4e-4056-901d-a3f6dc4a9905/storage_v2/_src_/database/todo_list.9zxrpg/schema/public.abK9xQ.meta
+/.idea/modules.xml
+*.xml
+*.meta
+*.iml
